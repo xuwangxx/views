@@ -1,1 +1,1 @@
-console.logs(11)
+console.log(11)
