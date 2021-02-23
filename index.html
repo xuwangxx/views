@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>可把我牛逼坏了</title>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div class="main"></div>
+</body>
+<style>
+	html, body {
+		width: 100vw;
+		height: 100vh;
+		position: relative;
+		padding: 0;
+		margin: 0;
+	}
+	.main {
+		position: absolute;
+		width: 600px;
+		height: 400px;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: 9;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		border-radius: 20px;
+		box-shadow: 0px 0px 2px 0px #999;
+	}
+	div {
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		left: 0;
+		top: 0;
+	}
+	div:nth-child(1) {
+		background: linear-gradient(238deg, rgb(130, 255, 0) 0%, rgb(0, 84, 166) 100%);
+	animation: move 2s infinite linear;
+}
+
+div:nth-child(2) {
+	background: linear-gradient(238deg, rgb(33, 200, 69) 0%, rgb(0, 0, 100) 100%);
+	mix-blend-mode: overlay;
+	animation: move 6s infinite linear;
+}
+
+div:nth-child(3) {
+	background: linear-gradient(238deg, rgb(200, 255, 255) 48%, rgb(3, 0, 151) 100%);
+	mix-blend-mode: multiply;
+	animation: move 7s infinite linear;
+}
+
+div:nth-child(4) {
+	background: radial-gradient(
+		100% 85% at 0% 100%,
+		rgb(0, 0, 0) 0%,
+		rgb(0, 131, 255) 50%,
+		rgb(255, 0, 0) 100%
+	);
+	mix-blend-mode: difference;
+	animation: move 4s infinite linear;
+}
+
+div:nth-child(5) {
+	background: radial-gradient(
+		100% 225% at 0% 100%,
+		rgb(255, 0, 0) 0%,
+		rgb(66, 255, 0) 100%
+	);
+	mix-blend-mode: difference;
+	animation: move 9s infinite linear;
+}
+
+div:nth-child(6) {
+	background: radial-gradient(
+		100% 140% at 100% 0%,
+		rgb(0, 134, 62) 0%,
+		rgb(0, 239, 255) 50%,
+		rgb(0, 113, 186) 100%
+	);
+	mix-blend-mode: overlay;
+	animation: move 8s infinite linear;
+}
+@keyframes move {
+	0% {
+		filter: unset;
+	}
+	
+	100% {
+		filter: hue-rotate(360deg);
+	}
+}
+</style>
+</html>
